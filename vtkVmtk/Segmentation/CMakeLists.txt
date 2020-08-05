@@ -1,15 +1,15 @@
 set(VTK_VMTK_SEGMENTATION_TARGET_LINK_LIBRARIES vtkvmtkDifferentialGeometry ${ITK_LIBRARIES})
 
 set( VTK_VMTK_SEGMENTATION_COMPONENTS
-vtkCommonComputationalGeometry
-vtkCommonCore
-vtkFiltersCore
-vtkImagingGeneral
-vtkIOImage
+CommonComputationalGeometry
+CommonCore
+FiltersCore
+ImagingGeneral
+IOImage
 )
 if (VTK_WRAP_PYTHON AND VTK_VMTK_WRAP_PYTHON)
 list(APPEND VTK_VMTK_SEGMENTATION_COMPONENTS
-  vtkWrappingPythonCore
+  WrappingPythonCore
   )
 endif(VTK_WRAP_PYTHON AND VTK_VMTK_WRAP_PYTHON)
 find_package( VTK ${VTK_VERSION_MAJOR}.${VTK_VERSION_MINOR} COMPONENTS ${VTK_VMTK_SEGMENTATION_COMPONENTS} REQUIRED )

@@ -20,7 +20,8 @@ IF(VMTK_WITH_LIBRARY_VERSION)
      )
 ENDIF(VMTK_WITH_LIBRARY_VERSION)
 
-FIND_PACKAGE( PythonInterp )
+# FIND_PACKAGE( PythonInterp )
+FIND_PACKAGE(Python3 COMPONENTS Interpreter Development)
 IF (NOT VMTK_PYTHON_VERSION)
   SET(VMTK_PYTHON_VERSION "python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}" CACHE STRING "" FORCE)
 ENDIF (NOT VMTK_PYTHON_VERSION)
@@ -82,8 +83,11 @@ option( VMTK_USE_SUPERBUILD
 # option( VMTK_USE_VTK7
 #  "Compile vmtk against VTK 7. OFF is VTK 6.3." ON )
 
-option( VMTK_USE_VTK8
-  "Compile vmtk against VTK 8. OFF is VTK 7.1" ON )
+option( VMTK_USE_VTK9
+        "Compile vmtk against VTK 9.", ON)
+
+# option( VMTK_USE_VTK8
+#  "Compile vmtk against VTK 8. OFF is VTK 7.1" OFF)
 
 option( VMTK_BUILD_TESTING
   "Build the VMTK testing libraries" OFF)
