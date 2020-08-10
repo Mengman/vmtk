@@ -88,9 +88,9 @@ option( VMTK_USE_VTK8
 option( VMTK_BUILD_TESTING
   "Build the VMTK testing libraries" OFF)
 
-IF(VMTK_BUILD_TESTING)
-  subdirs(tests)
-ENDIF(VMTK_BUILD_TESTING)
+# IF(VMTK_BUILD_TESTING)
+#   subdirs(tests)
+# ENDIF(VMTK_BUILD_TESTING)
 
 option( VMTK_BUNJEE_BUILD
   "Build VMTK and the projects it depends on ready for being linked from Bunjee." OFF )
