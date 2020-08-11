@@ -107,7 +107,7 @@ if( NOT USE_SYSTEM_VTK )
 
   SET(VTK_GIT_REPOSITORY "${GIT_PROTOCOL}://github.com/Kitware/VTK.git")
   if (VMTK_USE_VTK8)
-    set(VTK_GIT_TAG "v8.1.0")
+    set(VTK_GIT_TAG "v8.1.2")
     SET( VTK_VERSION 8.0 )
   else (VMTK_USE_VTK8)
     set(VTK_GIT_TAG "v7.1.0")
